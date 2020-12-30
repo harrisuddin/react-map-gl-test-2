@@ -31,7 +31,7 @@ function ImageMarker({ latitude, longitude, viewport, url, setSelectedImage }) {
             objectFit: "cover",
             borderRadius: "50%",
             border: `${viewport.zoom <= 4 ? "2" : "4"}px solid ${ringColour}`,
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 5)",
             transition: "0.5s ease",
             MozTransition: "0.5s ease",
             WebkitTransition: "0.5s ease",
