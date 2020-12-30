@@ -7,11 +7,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Camera />
-        </Route>
         <Route path="/map">
           <Map />
+        </Route>
+        <Route path="/">
+          <Camera />
         </Route>
       </Switch>
     </Router>

@@ -2,3 +2,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.mkr {
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  color: #f05305;
+}
+
+.mkr.red path {
+  fill: #f05305;
+}
+
+.mkr.yellow path {
+  fill: #f3b73e;
+}

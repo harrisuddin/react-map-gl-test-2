@@ -8,7 +8,7 @@ export class CameraFeed extends Component {
    */
   processDevices(devices) {
     devices.forEach((device) => {
-      console.log(device.label);
+      console.log(device);
       this.setDevice(device);
     });
   }
@@ -47,23 +47,19 @@ export class CameraFeed extends Component {
   takePhoto = () => {
     const { sendFile } = this.props;
     const context = this.canvas.getContext("2d");
-    context.drawImage(this.videoPlayer, 0, 0, 680, 360);
-    this.canvas.toBlob(sendFile);
+    context.drawImage(this.videoPlayer, 0, 0, 680, 480);
+    if (sendFile) this.canvas.toBlob(sendFile);
   };
 
   render() {
     return (
       <div className="c-camera-feed">
         <div className="c-camera-feed__viewer">
-          <video
-            ref={(ref) => (this.videoPlayer = ref)}
-            width="680"
-            height="360"
-          />
+          <video ref={(ref) => (this.videoPlayer = ref)} />
         </div>
         <button onClick={this.takePhoto}>Take photo!</button>
         <div className="c-camera-feed__stage">
-          <canvas width="680" height="360" ref={(ref) => (this.canvas = ref)} />
+          <canvas width="640" height="480" ref={(ref) => (this.canvas = ref)} />
         </div>
       </div>
     );
