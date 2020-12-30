@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Marker } from "react-map-gl";
 
 function ImageMarker({ latitude, longitude, viewport, url, setSelectedImage }) {
-  const [isPressed, setIsPressed] = useState(null);
   const [ringColour, setRingColour] = useState("white");
 
   return (
